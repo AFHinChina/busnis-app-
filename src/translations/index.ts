@@ -1,0 +1,83 @@
+import { Language } from '../types/language';
+
+export const translations = {
+  ar: {
+    dashboard: 'لوحة التحكم',
+    accounts: 'الحسابات',
+    transactions: 'المعاملات',
+    reports: 'التقارير',
+    customers: 'العملاء',
+    vendors: 'الموردين',
+    documents: 'المستندات',
+    settings: 'الإعدادات',
+    financeHub: 'المركز المالي',
+    addTransaction: 'تسجيل معاملة جديدة',
+    resetData: 'تصفير البيانات',
+    totalBalance: 'الرصيد الإجمالي',
+    monthlyIncome: 'الدخل الشهري',
+    monthlyExpenses: 'المصروفات الشهرية',
+    whatToRecord: 'ماذا تريد أن تسجل اليوم؟',
+    income: 'دخل',
+    expense: 'مصروف',
+    selectAccount: 'اختر الحساب',
+    enterAmount: 'أدخل المبلغ',
+    category: 'الفئة',
+    selectCategory: 'اختر الفئة',
+    description: 'الوصف',
+    enterDescription: 'اكتب وصفاً مختصراً'
+  },
+  en: {
+    dashboard: 'Dashboard',
+    accounts: 'Accounts',
+    transactions: 'Transactions',
+    reports: 'Reports',
+    customers: 'Customers',
+    vendors: 'Vendors',
+    documents: 'Documents',
+    settings: 'Settings',
+    financeHub: 'Finance Hub',
+    addTransaction: 'Add New Transaction',
+    resetData: 'Reset Data',
+    totalBalance: 'Total Balance',
+    monthlyIncome: 'Monthly Income',
+    monthlyExpenses: 'Monthly Expenses',
+    whatToRecord: 'What would you like to record today?',
+    income: 'Income',
+    expense: 'Expense',
+    selectAccount: 'Select Account',
+    enterAmount: 'Enter Amount',
+    category: 'Category',
+    selectCategory: 'Select Category',
+    description: 'Description',
+    enterDescription: 'Enter a brief description'
+  },
+  zh: {
+    dashboard: '仪表板',
+    accounts: '账户',
+    transactions: '交易',
+    reports: '报告',
+    customers: '客户',
+    vendors: '供应商',
+    documents: '文档',
+    settings: '设置',
+    financeHub: '金融中心',
+    addTransaction: '添加新交易',
+    resetData: '重置数据',
+    totalBalance: '总余额',
+    monthlyIncome: '月收入',
+    monthlyExpenses: '月支出',
+    whatToRecord: '今天要记录什么？',
+    income: '收入',
+    expense: '支出',
+    selectAccount: '选择账户',
+    enterAmount: '输入金额',
+    category: '类别',
+    selectCategory: '选择类别',
+    description: '描述',
+    enterDescription: '输入简短描述'
+  }
+} as const;
+
+export const getTranslation = (key: keyof typeof translations.ar, language: Language) => {
+  return translations[language][key];
+};

@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-family: system-ui, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-family);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* RTL Specific Styles */
+  html[dir="rtl"] {
+    --font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+  }
+
+  /* Chinese Specific Styles */
+  html[lang="zh"] {
+    --font-family: 'Noto Sans SC', system-ui, sans-serif;
+  }
+
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button, 
+    [role="button"],
+    input,
+    select {
+      min-height: 44px;
+      padding: 0.5rem;
+    }
+  }
+}
+
+/* Font Loading */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+
+/* RTL Layout Adjustments */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Transition Styles */
+.layout-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Improve scrolling experience */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Better tap targets for mobile */
+@media (max-width: 768px) {
+  .mobile-friendly-tap {
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+  }
+}

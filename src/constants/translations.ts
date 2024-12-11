@@ -1,0 +1,17 @@
+export const translations = {
+  dashboard: 'لوحة التحكم',
+  accounts: 'الحسابات',
+  transactions: 'المعاملات',
+  reports: 'التقارير',
+  customers: 'العملاء',
+  vendors: 'الموردين',
+  documents: 'المستندات',
+  settings: 'الإعدادات',
+  totalBalance: 'الرصيد الإجمالي',
+  monthlyIncome: 'الدخل الشهري',
+  monthlyExpenses: 'المصروفات الشهرية',
+  activeCustomers: 'العملاء النشطون',
+  recentTransactions: 'المعاملات الأخيرة',
+  noTransactions: 'لا توجد معاملات حتى الآن',
+  financeHub: 'المركز المالي',
+} as const;
